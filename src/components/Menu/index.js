@@ -2,6 +2,7 @@ import React from 'react'
 
 import Logo from '../../assets/img/logo.png'
 import './styles.css';
+import ButtonLink from '../ButtonLink';
 
 export default function Menu() {
   return (
@@ -10,9 +11,10 @@ export default function Menu() {
         <img className="Logo" src={Logo} alt="TDDEVFLIX"/>
       </a>
 
-      <a href="" className="ButtonLink">
+
+      <ButtonLink className="ButtonLink" href="/">
         Novo Vídeo
-      </a>
+      </ButtonLink>
     </nav>
   );
 }
