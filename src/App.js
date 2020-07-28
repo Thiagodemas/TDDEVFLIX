@@ -11,7 +11,7 @@ function App() {
     <div style={{background: '#141414'}}>
      <Menu />
       <BannerMain
-        videoTitle={DadosIniciais.categorias[0].videos[0].titulo[0]}
+        videoTitle={"O que faz uma desenvolvedora Front-end? "}
         url={DadosIniciais.categorias[0].videos[0].url}
         videoDescription={"O que é Front-end? Trabalhando na área"}
       />
