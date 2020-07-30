@@ -1,20 +1,22 @@
-import React from 'react'
-
+import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../../assets/img/logo.png'
 import './styles.css';
-import ButtonLink from '../ButtonLink';
+import Button from '../Button';
+// import ButtonLink from './components/ButtonLink';
 
-export default function Menu() {
+function Menu() {
   return (
     <nav className="Menu">
-      <a href="/">
-        <img className="Logo" src={Logo} alt="TDDEVFLIX"/>
-      </a>
+      <Link to="/">
+        <img className="Logo" src={Logo} alt="AluraFlix logo" />
+      </Link>
 
-
-      <ButtonLink className="ButtonLink" href="/">
-        Novo Vídeo
-      </ButtonLink>
+      <Button as={Link} className="ButtonLink" to="/cadastro/video">
+        Novo vídeo
+      </Button>
     </nav>
   );
 }
+
+export default Menu;
