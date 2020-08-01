@@ -27,9 +27,11 @@ function CadastroCategoria() {
     );
   }
 
+  // ============
+
   useEffect(() => {
     if (window.location.href.includes('localhost')) {
-      const URL = 'http://localhost:8080/categorias';
+      const URL = 'http://localhost:3001/categorias';
       fetch(URL)
         .then(async (respostaDoServer) => {
           if (respostaDoServer.ok) {
@@ -43,11 +45,9 @@ function CadastroCategoria() {
   }, []);
 
   return (
-    // eslint-disable-next-line react/jsx-filename-extension
     <PageDefault>
       <h1>
         Cadastro de Categoria:
-        {' '}
         {values.nome}
       </h1>
 
@@ -78,8 +78,6 @@ function CadastroCategoria() {
           value={values.descricao}
           onChange={handleChange}
         />
-        {}
-
         <FormField
           label="Cor"
           type="color"
@@ -87,16 +85,15 @@ function CadastroCategoria() {
           value={values.cor}
           onChange={handleChange}
         />
-        {}
 
-        <Button>
+        <Button type="submit">
           Cadastrar
         </Button>
       </form>
 
       <ul>
-        {categorias.map((categoria, indice) => (
-          <li key={`${categoria}${indice}`}>
+        {categorias.map((categoria) => (
+          <li key={`${categoria.id}`}>
             {categoria.titulo}
           </li>
         ))}

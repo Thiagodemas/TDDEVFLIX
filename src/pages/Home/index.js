@@ -8,12 +8,12 @@ import DadosIniciais from '../../data/dados_iniciais.json';
 
 function Home() {
   return (
-    <div style={{background: '#141414'}}>
-     <Menu />
+    <div style={{ background: '#141414' }}>
+      <Menu />
       <BannerMain
-        videoTitle={"O que faz uma desenvolvedora Front-end? "}
+        videoTitle="O que faz uma desenvolvedora Front-end? "
         url={DadosIniciais.categorias[0].videos[0].url}
-        videoDescription={"O que é Front-end? Trabalhando na área"}
+        videoDescription="O que é Front-end? Trabalhando na área"
       />
       <Carousel
         ignoreFirstVideo
@@ -39,7 +39,7 @@ function Home() {
         ignoreFirstVideo
         category={DadosIniciais.categorias[5]}
       />
-      <Footer/>
+      <Footer />
     </div>
   );
 }
